@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multiple Anchors</title>
+  <style>
+    .content {
+      display: none;
+      margin-top: 1rem;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Anchor Tags -->
+  <a href="#" data-target="content1">Show Content 1</a> |
+  <a href="#" data-target="content2">Show Content 2</a> |
+  <a href="#" data-target="content3">Show Content 3</a>
+
+  <!-- Hidden Content Areas -->
+  <div id="content1" class="content">🚀 This is Content 1</div>
+  <div id="content2" class="content">🎮 This is Content 2</div>
+  <div id="content3" class="content">🎨 This is Content 3</div>
+
+  <!-- JavaScript -->
+  <script>
+    const links = document.querySelectorAll('a[data-target]');
+    const contents = document.querySelectorAll('.content');
+
+    links.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('data-target');
+
+        // Hide all content
+        contents.forEach(div => div.style.display = 'none');
+
+        // Show the clicked content
+        const targetContent = document.getElementById(targetId);
+        if (targetContent) {
+          targetContent.style.display = 'block';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

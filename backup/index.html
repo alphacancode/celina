@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="bg-[#1e1e1e] text-[#0FF8F6] flex items-center justify-center min-h-screen">
+<div class="">
+    <h2 class="text-8xl font-bit" id="countdown"></h2>
+    <!-- content -->
+    <div class="menu-container">
+        <div class="menu-header">
+          <span>Game Over</span>
+          <span>Resume play?</span>
+        </div>
+    
+        <div class="menu-option selected">Lower difficulty level</div>
+        <div class="menu-option">Retry battle</div>
+        <div class="menu-option">Start from Tartarus entrance</div>
+        <div class="menu-option">Return to title screen</div>
+      </div>
+    <!-- div end -->
+</div>
+    <script>function countdown(targetDate, displayElement) {
+        const second = 1000;
+        const minute = second * 60;
+        const hour = minute * 60;
+        const day = hour * 24;
+      
+        function updateDisplay() {
+          const now = new Date().getTime();
+          const timeLeft = targetDate.getTime() - now;
+      
+          if (timeLeft < 0) {
+            displayElement.textContent = "You are Invited!";
+            clearInterval(intervalId);
+            return;
+          }
+      
+          const days = Math.floor(timeLeft / day);
+          const hours = Math.floor((timeLeft % day) / hour);
+          const minutes = Math.floor((timeLeft % hour) / minute);
+          const seconds = Math.floor((timeLeft % minute) / second);
+      
+          displayElement.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+      
+        updateDisplay();
+        const intervalId = setInterval(updateDisplay, 1000);
+      }
+      
+      const targetDate = new Date("2025-09-01T00:00:00");
+      const displayElement = document.getElementById("countdown");
+      
+      countdown(targetDate, displayElement);</script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
+  </body>
+</html>
