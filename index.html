@@ -18,6 +18,10 @@
   </style>
 </head>
 <body class="bg-[#1e1e1e]">
+  <audio id="bg-music" src="./audio/bg.mp3" loop></audio>
+  <button id="play-music" class="fixed bottom-4 right-4 bg-[#0FF8F6] text-black font-agatho px-4 py-2 rounded shadow z-50 hidden">
+  ▶ PLAY MUSIC
+</button>
  <section class="relative min-h-screen w-full overflow-hidden bg-black text-white font-sans">
 <img src="./images/nbg.png"
      alt="Decorative"
@@ -40,7 +44,7 @@
          <h4 class="text-xl sm:text-2xl font-agatho text-white">
       SEPTEMBER 2025, MNL PH
     </h4>
-   <h1 id="typing-text"
+   <h1 id="rotating-text"
     class="text-5xl sm:text-6xl lg:text-9xl font-bold mb-4 text-[#0FF8F6] font-agatho cursor text-center break-words leading-tight max-w-full">
 </h1>
     
@@ -83,7 +87,7 @@
   <div class="z-10 text-center max-w-2xl w-full p-8 border border-white border-opacity-10 rounded-md backdrop-blur-md bg-white/5 shadow-xl">
 
     <!-- Heading -->
-    <h1 class="text-4xl sm:text-6xl font-bold mb-4 text-[#0FF8F6] font-agatho">WEDDING TIMELINE</h1>
+    <h1 class="text-4xl sm:text-6xl font-bold mb-4 text-[#0FF8F6] font-agatho cursor">WEDDING TIMELINE</h1>
 
     <!-- Timeline Events -->
     <div class="space-y-6 text-left font-bit text-white text-sm sm:text-base">
@@ -126,7 +130,7 @@
 
     <!-- Text Content -->
     <div class="max-w-md text-left z-10">
-      <h1 class="text-4xl sm:text-8xl font-bold mb-4 text-[#0FF8F6] font-agatho">Attire</h1>
+      <h1 class="text-4xl sm:text-8xl font-bold mb-4 text-[#0FF8F6] font-agatho cursor">Attire</h1>
       <p class="text-sm sm:text-lg text-white">
         We kindly ask that if you plan to wear revealing outfits, especially for the church ceremony, please bring a shawl or cover-up.
         <br><br>
@@ -159,7 +163,7 @@
 
     <!-- Content -->
     <div class="max-w-md text-left z-10">
-      <h1 class="text-4xl sm:text-8xl font-bold mb-4 text-[#0FF8F6] font-agatho">Venue</h1>
+      <h1 class="text-4xl sm:text-8xl font-bold mb-4 text-[#0FF8F6] font-agatho cursor">Venue</h1>
       <p class="text-sm sm:text-lg text-white">
         To make it easier for you to find the place, just click the button below to view the map pin and get directions straight to the venue. 
       </p>
@@ -185,21 +189,26 @@
   <!-- Optional dark overlay for readability -->
   <div class="absolute inset-0 bg-[#1e1e1e]/70 z-0"></div>
 
+  <!-- Top-Right Decorative Image -->
+  <img src="./images/support.png"
+       alt="Decorative Accent"
+       class="absolute top-0 right-0 object-contain pointer-events-none select-none opacity-25 z-0" />
+
   <!-- Full-Width Bottom Decorative Image -->
   <img src="./images/List.png"
        alt="Decorative"
-       class="absolute bottom-0 left-0 w-full h-auto  object-cover object-bottom pointer-events-none select-none z-0" />
+       class="absolute bottom-0 left-0 w-full h-auto object-cover object-bottom pointer-events-none select-none z-0" />
 
   <!-- Main Content -->
   <div class="relative z-10 w-full max-w-6xl text-center">
 
     <!-- Title -->
-    <h1 class="text-5xl sm:text-6xl font-bold font-agatho text-[#0FF8F6] mb-10 tracking-wide">
+    <h1 class="text-5xl sm:text-6xl font-bold font-agatho text-[#0FF8F6] mb-10 tracking-wide cursor">
       LIST OF ENTOURAGE
     </h1>
 
     <!-- Key Roles -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 w-full font-bit text-sm sm:text-base px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 w-full  text-sm sm:text-base px-4">
       <div class="bg-white/5 border border-white border-opacity-10 p-4 rounded-md shadow-inner">
         <p class="text-[#0FF8F6] font-semibold uppercase mb-1">Maid of Honor</p>
         <p>Arnina Beatrice G. Quiros</p>
@@ -211,7 +220,7 @@
     </div>
 
     <!-- Entourage Grid -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 w-full max-w-5xl mx-auto font-bit text-xs sm:text-sm">
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 w-full max-w-5xl mx-auto  text-xs sm:text-sm">
       <!-- Individual Entries -->
       <div class="bg-white/5 border border-white border-opacity-10 p-3 text-center rounded-md hover:bg-[#0FF8F6]/10 transition">Arnold Luigi G. Quiros</div>
       <div class="bg-white/5 border border-white border-opacity-10 p-3 text-center rounded-md hover:bg-[#0FF8F6]/10 transition">Angel Verame</div>
@@ -286,22 +295,73 @@
   </script>
 
   <!-- hide and show content display -->
-  <script>
-    const text = `SAVE THE DATE`;
+<!-- typing effect -->
+ <script>
+  const messages = [
+    "SAVE THE DATE",
+    "09.15.2025 MNL, PH",
+    "You're invited to witness the celebration",
+    "Celina & Arvee"
+  ];
 
-    const el = document.getElementById('typing-text');
-    let index = 0;
+  const el = document.getElementById("rotating-text");
+  const typingSpeed = 60;
+  const deletingSpeed = 40;
+  const holdTime = 2000;
 
-    function typeNextChar() {
-      if (index < text.length) {
-        el.textContent += text[index];
-        index++;
-        setTimeout(typeNextChar, 50); // Adjust typing speed (ms)
-      }
+  let msgIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function typeRotate() {
+    const currentMessage = messages[msgIndex];
+    const visibleText = currentMessage.substring(0, charIndex);
+    el.textContent = visibleText;
+
+    if (!isDeleting && charIndex < currentMessage.length) {
+      charIndex++;
+      setTimeout(typeRotate, typingSpeed);
+    } else if (isDeleting && charIndex > 0) {
+      charIndex--;
+      setTimeout(typeRotate, deletingSpeed);
+    } else {
+      // Pause, then switch modes
+      isDeleting = !isDeleting;
+      if (!isDeleting) msgIndex = (msgIndex + 1) % messages.length;
+      setTimeout(typeRotate, holdTime);
     }
+  }
 
-    // Start typing effect after slight delay
-    setTimeout(typeNextChar, 500);
-  </script>
+  // Start typing after slight delay
+  setTimeout(typeRotate, 500);
+</script>
+
+<!-- typing effect end -->
+  <!-- music -->
+   <!-- Hidden Audio Player -->
+
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const audio = document.getElementById('bg-music');
+    const playBtn = document.getElementById('play-music');
+
+    audio.volume = 0.4;
+
+    // Attempt autoplay
+    audio.play().catch(() => {
+      // If autoplay fails, show fallback button
+      playBtn.classList.remove('hidden');
+    });
+
+    // Play music on button click
+    playBtn.addEventListener('click', () => {
+      audio.play();
+      playBtn.classList.add('hidden'); // Hide button after play
+    });
+  });
+</script>
+
+
+   <!-- music end -->
 </body>
 </html>
