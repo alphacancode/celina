@@ -56,14 +56,19 @@
 </h1>
 
   <!-- Centered Content -->
-   
   <div class="relative z-20 flex flex-col items-center justify-center text-center px-4 min-h-screen">
       <div class="text-center max-w-full overflow-hidden">
-  
-        <!-- Countdown -->
-    <h2 class="text-base sm:text-lg font-semibold tracking-wide uppercase font-bit text-white " id="countdown">
-      <!-- countdown goes here -->
-    </h2>
+<!-- Countdown UI Box -->
+<div class="bg-white/5 backdrop-blur-md border border-white/10 px-4 sm:px-6 py-3 sm:py-4 rounded-md shadow-xl text-center w-fit mx-auto">
+  <h2 id="countdown" 
+      class="text-white text-sm sm:text-lg font-bit uppercase tracking-widest font-semibold"
+      style="text-shadow: 0 0 6px #0FF8F6;">
+    <!-- Countdown goes here -->
+    99d 23h 59m 59s
+  </h2>
+</div>
+
+
    <h1 id="rotating-text"
     class="text-5xl sm:text-6xl lg:text-9xl font-bold mb-10 text-[#0FF8F6] font-agatho cursor text-center break-words leading-tight max-w-full">
 </h1>
@@ -149,14 +154,28 @@
         Thank you for understanding and helping us keep the occasion both elegant and respectful!
       </p>
 
-      <!-- color start -->
-      <div class="flex gap-4 mt-10 ">
-        <div class="w-[60px] h-[60px] bg-[#4169E1] border border-white"></div>
-        <div class="w-[60px] h-[60px] bg-[#A8C3D1] border border-white"></div>
-        <div class="w-[60px] h-[60px] bg-[#B0E0E6] border border-white"></div>
-        <div class="w-[60px] h-[60px] bg-[#000000] border border-white"></div>
-      </div>
-      <!-- color end -->
+     <!-- Color Section with Title and Icon -->
+<div class="relative w-fit mx-auto mt-10">
+  <!-- Alert Icon (Top-Left Corner) -->
+ 
+
+  <!-- Text Label -->
+  <p class="text-white text-center text-sm sm:text-base font-bit mb-2 tracking-wide">Suggested Color Palette</p>
+
+  <!-- Color Swatches -->
+  <div class="flex gap-4 bg-white/5 backdrop-blur-md border border-white/10 px-4 sm:px-6 py-3 sm:py-4 rounded-md shadow-xl text-center">
+     <div class="absolute -top-3 -left-3 bg-[#0FF8F6] text-black rounded-full p-1 shadow-md">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m0-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z" />
+    </svg>
+  </div>
+    <div class="w-[60px] h-[60px] bg-[#4169E1] border border-white"></div>
+    <div class="w-[60px] h-[60px] bg-[#A8C3D1] border border-white"></div>
+    <div class="w-[60px] h-[60px] bg-[#B0E0E6] border border-white"></div>
+    <div class="w-[60px] h-[60px] bg-[#000000] border border-white"></div>
+  </div>
+</div>
+
     </div>
 
     <!-- Bottom-Left Image -->
