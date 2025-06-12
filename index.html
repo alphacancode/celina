@@ -19,7 +19,7 @@
 </head>
 <body class="bg-[#1e1e1e]">
   <audio id="bg-music" src="./audio/bg.mp3" loop></audio>
-  <button id="play-music" class="fixed bottom-4 right-4 bg-[#0FF8F6] text-black font-agatho px-4 py-2 rounded shadow z-50 hidden">
+  <button id="play-music" class="fixed bottom-4 right-4 bg-[#0FF8F6] text-black font-bold font-agatho px-4 py-2 rounded shadow z-50 hidden">
   ▶ PLAY MUSIC
 </button>
  <section class="relative min-h-screen w-full overflow-hidden bg-black text-white font-sans">
@@ -39,25 +39,25 @@
 </h1>
 
   <!-- Centered Content -->
+   
   <div class="relative z-20 flex flex-col items-center justify-center text-center px-4 min-h-screen">
       <div class="text-center max-w-full overflow-hidden">
-         <h4 class="text-xl sm:text-2xl font-agatho text-white">
+         <!-- <h4 class="text-xl sm:text-2xl font-agatho text-white">
       SEPTEMBER 2025, MNL PH
-    </h4>
+    </h4> -->
+        <!-- Countdown -->
+    <h2 class="text-base sm:text-lg font-semibold tracking-wide uppercase font-bit text-white " id="countdown">
+      <!-- countdown goes here -->
+    </h2>
    <h1 id="rotating-text"
-    class="text-5xl sm:text-6xl lg:text-9xl font-bold mb-4 text-[#0FF8F6] font-agatho cursor text-center break-words leading-tight max-w-full">
+    class="text-5xl sm:text-6xl lg:text-9xl font-bold mb-10 text-[#0FF8F6] font-agatho cursor text-center break-words leading-tight max-w-full">
 </h1>
     
   </div>
-    <!-- Countdown -->
-    <h2 class="text-base sm:text-lg font-semibold tracking-wide uppercase font-bit text-white mb-8" id="countdown">
-      <!-- countdown goes here -->
-    </h2>
+
     <!-- Button Group -->
-    <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
-  <a class="button-borders p-1">
-    <button class="primary-button w-full sm:w-auto">Venue</button>
-  </a>
+    <div class="flex sm:flex-row flex-wrap justify-center gap-6">
+  
   <a class="button-borders p-1" href="#details">
     <button class="primary-button w-full sm:w-auto">Event Details</button>
   </a>
@@ -84,27 +84,28 @@
        class="absolute top-0 left-0  object-contain pointer-events-none select-none opacity-25 z-0" />
 
   <!-- Main Timeline Box -->
-  <div class="z-10 text-center max-w-2xl w-full p-8 border border-white border-opacity-10 rounded-md backdrop-blur-md bg-white/5 shadow-xl">
+<div class="bg-yellow-300 p-6 rounded-md shadow-lg rotate-[-2deg] max-w-2xl w-full text-black text-center mx-auto ">
+  <!-- Heading -->
+  <h1 class="text-4xl sm:text-6xl font-bold mb-6 text-black font-agatho">WEDDING TIMELINE</h1>
 
-    <!-- Heading -->
-    <h1 class="text-4xl sm:text-6xl font-bold mb-4 text-[#0FF8F6] font-agatho cursor">WEDDING TIMELINE</h1>
-
-    <!-- Timeline Events -->
-    <div class="space-y-6 text-left font-bit text-white text-sm sm:text-base">
-      <div class="flex flex-col sm:flex-row sm:items-center gap-2">
-        <span class="text-[#0FF8F6] w-40 font-semibold">10:30AM – 12:30PM</span>
-        <span>Ceremony</span>
-      </div>
-      <div class="flex flex-col sm:flex-row sm:items-center gap-2">
-        <span class="text-[#0FF8F6] w-40 font-semibold">1:00PM – 2:00PM</span>
-        <span>Start of the Program</span>
-      </div>
-      <div class="flex flex-col sm:flex-row sm:items-center gap-2">
-        <span class="text-[#0FF8F6] w-40 font-semibold">2:00PM – 5:00PM</span>
-        <span>Festivities, eating & making memories</span>
-      </div>
+  <!-- Timeline Events -->
+  <div class="space-y-6 text-left text-sm sm:text-base">
+    <div class="flex flex-col sm:flex-row sm:items-center gap-2 border-b border-black py-4">
+      <span class="text-black w-40 font-semibold">10:30AM – 12:30PM</span>
+      <span class="text-2xl font-bold sm:text-2xl font-agatho text-black">Ceremony</span>
+    </div>
+    <div class="flex flex-col sm:flex-row sm:items-center gap-2 border-b border-black py-4">
+      <span class="text-black w-40 font-semibold">1:00PM – 2:00PM</span>
+      <span class="text-2xl font-bold sm:text-2xl font-agatho text-black">Start of the Program</span>
+    </div>
+    <div class="flex flex-col sm:flex-row sm:items-center gap-2 border-b border-black py-4">
+      <span class="text-black w-40 font-semibold">2:00PM – 5:00PM</span>
+      <span class="text-2xl font-bold sm:text-2xl font-agatho text-black">Festivities, eating & making memories</span>
     </div>
   </div>
+</div>
+
+
 
   <!-- Bottom-Right Character Image -->
   <img src="./images/scheduleattendant.png"
@@ -199,44 +200,66 @@
        alt="Decorative"
        class="absolute bottom-0 left-0 w-full h-auto object-cover object-bottom pointer-events-none select-none z-0" />
 
-  <!-- Main Content -->
-  <div class="relative z-10 w-full max-w-6xl text-center">
+<!-- Main Entourage Box -->
+<div class="bg-yellow-300 p-6 rounded-md shadow-lg rotate-[-2deg] max-w-4xl w-full text-black text-center mx-auto">
+  <!-- Heading -->
+  <h1 class="text-4xl sm:text-6xl font-bold mb-6 text-black font-agatho tracking-wide">
+    LIST OF ENTOURAGE
+  </h1>
 
-    <!-- Title -->
-    <h1 class="text-5xl sm:text-6xl font-bold font-agatho text-[#0FF8F6] mb-10 tracking-wide cursor">
-      LIST OF ENTOURAGE
-    </h1>
+  <!-- Table-Like Rows -->
+  <div class="flex flex-col space-y-4 text-left font-agatho text-base sm:text-lg">
+    
+<!-- Maid of Honor -->
+<div class="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center border-b border-black pb-2">
+  <div class="flex items-center gap-2 sm:w-1/2 text-2xl font-bold text-cyan-600 cursor">
+    <img src="./images/maid.png" alt="Maid Icon" class="w-6 h-6 sm:w-8 sm:h-8 object-contain" />
+    Maid of Honor
+  </div>
+  <div class="sm:w-1/2 text-2xl font-bold">Arnina Beatrice G. Quiros</div>
+</div>
 
-    <!-- Key Roles -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 w-full  text-sm sm:text-base px-4">
-      <div class="bg-white/5 border border-white border-opacity-10 p-4 rounded-md shadow-inner">
-        <p class="text-[#0FF8F6] font-semibold uppercase mb-1">Maid of Honor</p>
-        <p>Arnina Beatrice G. Quiros</p>
-      </div>
-      <div class="bg-white/5 border border-white border-opacity-10 p-4 rounded-md shadow-inner">
-        <p class="text-[#0FF8F6] font-semibold uppercase mb-1">Best Man</p>
-        <p>Jeoh D. Ogbac</p>
-      </div>
+<!-- Best Man -->
+<div class="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center border-b border-black pb-2">
+  <div class="flex items-center gap-2 sm:w-1/2 text-2xl font-bold text-red-600 cursor">
+    <img src="./images/groom.png" alt="Best Man Icon" class="w-6 h-6 sm:w-8 sm:h-8 object-contain" />
+    Best Man
+  </div>
+  <div class="sm:w-1/2 text-2xl font-bold">Jeoh D. Ogbac</div>
+</div>
+
+
+    <!-- Other Rows -->
+    <div class="flex flex-col sm:flex-row sm:justify-between border-b border-black pb-2">
+      <div class="sm:w-1/2 text-2xl font-bold sm:text-2xl">Arnold Luigi G. Quiros</div>
+      <div class="sm:w-1/2 text-2xl font-bold sm:text-2xl">Angel Verame</div>
     </div>
-
-    <!-- Entourage Grid -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 w-full max-w-5xl mx-auto  text-xs sm:text-sm">
-      <!-- Individual Entries -->
-      <div class="bg-white/5 border border-white border-opacity-10 p-3 text-center rounded-md hover:bg-[#0FF8F6]/10 transition">Arnold Luigi G. Quiros</div>
-      <div class="bg-white/5 border border-white border-opacity-10 p-3 text-center rounded-md hover:bg-[#0FF8F6]/10 transition">Angel Verame</div>
-      <div class="bg-white/5 border border-white border-opacity-10 p-3 text-center rounded-md hover:bg-[#0FF8F6]/10 transition">Jayson Alay</div>
-      <div class="bg-white/5 border border-white border-opacity-10 p-3 text-center rounded-md hover:bg-[#0FF8F6]/10 transition">Anjari Noronha</div>
-      <div class="bg-white/5 border border-white border-opacity-10 p-3 text-center rounded-md hover:bg-[#0FF8F6]/10 transition">Franco ???</div>
-      <div class="bg-white/5 border border-white border-opacity-10 p-3 text-center rounded-md hover:bg-[#0FF8F6]/10 transition">Karina Arcilla</div>
-      <div class="bg-white/5 border border-white border-opacity-10 p-3 text-center rounded-md hover:bg-[#0FF8F6]/10 transition">Miguel Arcilla</div>
-      <div class="bg-white/5 border border-white border-opacity-10 p-3 text-center rounded-md hover:bg-[#0FF8F6]/10 transition">Mary Vasquez</div>
-      <div class="bg-white/5 border border-white border-opacity-10 p-3 text-center rounded-md hover:bg-[#0FF8F6]/10 transition">Miguel Canillas</div>
-      <div class="bg-white/5 border border-white border-opacity-10 p-3 text-center rounded-md hover:bg-[#0FF8F6]/10 transition">Faith Gayatao</div>
-      <div class="bg-white/5 border border-white border-opacity-10 p-3 text-center rounded-md hover:bg-[#0FF8F6]/10 transition">???</div>
-      <div class="bg-white/5 border border-white border-opacity-10 p-3 text-center rounded-md hover:bg-[#0FF8F6]/10 transition">???</div>
+    <div class="flex flex-col sm:flex-row sm:justify-between border-b border-black pb-2">
+      <div class="sm:w-1/2 text-2xl font-bold sm:text-2xl">Jayson Alay</div>
+      <div class="sm:w-1/2 text-2xl font-bold sm:text-2xl">Anjari Noronha</div>
+    </div>
+    <div class="flex flex-col sm:flex-row sm:justify-between border-b border-black pb-2">
+      <div class="sm:w-1/2 text-2xl font-bold sm:text-2xl">Franco ???</div>
+      <div class="sm:w-1/2 text-2xl font-bold sm:text-2xl">Karina Arcilla</div>
+    </div>
+    <div class="flex flex-col sm:flex-row sm:justify-between border-b border-black pb-2">
+      <div class="sm:w-1/2 text-2xl font-bold sm:text-2xl">Miguel Arcilla</div>
+      <div class="sm:w-1/2 text-2xl font-bold sm:text-2xl">Mary Vasquez</div>
+    </div>
+    <div class="flex flex-col sm:flex-row sm:justify-between border-b border-black pb-2">
+      <div class="sm:w-1/2 text-2xl font-bold sm:text-2xl">Miguel Canillas</div>
+      <div class="sm:w-1/2 text-2xl font-bold sm:text-2xl">Faith Gayatao</div>
+    </div>
+    <div class="flex flex-col sm:flex-row sm:justify-between">
+      <div class="sm:w-1/2 text-2xl font-bold sm:text-2xl">???</div>
+      <div class="sm:w-1/2 text-2xl font-bold sm:text-2xl">???</div>
     </div>
 
   </div>
+</div>
+
+
+
 </section>
 
  <!-- attendee program end -->
@@ -299,7 +322,7 @@
  <script>
   const messages = [
     "SAVE THE DATE",
-    "09.15.2025 MNL, PH",
+    "09.DAY.2025 MNL, PH",
     "You're invited to witness the celebration",
     "Celina & Arvee"
   ];
