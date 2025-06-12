@@ -4,9 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Celina & Arvee Wedding</title>
+
+  <!-- Favicon -->
+
+  <!-- You can also use PNG format -->
+   <link rel="icon" href="./images/favicon.png" type="image/png" /> 
+
+  <!-- Open Graph Meta Tags for Social Sharing -->
+  <meta property="og:title" content="Celina & Arvee Wedding" />
+  <meta property="og:description" content="You're invited to celebrate the wedding of Celina & Arvee — September 2025, MNL PH." />
+  <meta property="og:image" content="./images/graph.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://yourdomain.com/" />
+
+  <!-- Tailwind & CSS -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="stylesheet" href="./style.css" />
-    <style>
+
+  <!-- Cursor Blinking Style -->
+  <style>
     .cursor::after {
       content: '.';
       animation: blink 1s infinite;
@@ -17,22 +33,23 @@
     }
   </style>
 </head>
+
 <body class="bg-[#1e1e1e]">
   <audio id="bg-music" src="./audio/bg.mp3" loop></audio>
   <button id="play-music" class="fixed bottom-4 right-4 bg-[#0FF8F6] text-black font-bold font-agatho px-4 py-2 rounded shadow z-50 hidden">
   ▶ PLAY MUSIC
 </button>
- <section class="relative min-h-screen w-full overflow-hidden bg-black text-white font-sans">
+ <section class="relative min-h-screen w-full overflow-hidden bg-[#1e1e1e] text-white font-sans">
+  
 <img src="./images/nbg.png"
      alt="Decorative"
      class="absolute bottom-0 right-0 w-[500px] h-[500px] sm:w-[900px] sm:h-[900px] object-contain z-0  pointer-events-none select-none" />
 
   <!-- Background Image -->
-  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('your-image.jpg'); z-index: 0;"></div>
-  <!-- Blue Gradient Overlay -->
-  <div class="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-transparent z-10"></div>
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('./images/cloud.png'); z-index: 0;"></div>
+
   <!-- Massive Background Text -->
-  <h1 class="absolute top-0 left-0 text-[400px] sm:text-[560px] font-agatho opacity-5 leading-none z-0 whitespace-nowrap"
+  <h1 class="absolute top-0 left-0 text-[400px] sm:text-[560px] font-agatho opacity-2 leading-none z-0 whitespace-nowrap"
     style="-webkit-text-stroke: 5px #ffffff; color: transparent;">
   CELINA <br>
   ARVEE
@@ -42,9 +59,7 @@
    
   <div class="relative z-20 flex flex-col items-center justify-center text-center px-4 min-h-screen">
       <div class="text-center max-w-full overflow-hidden">
-         <!-- <h4 class="text-xl sm:text-2xl font-agatho text-white">
-      SEPTEMBER 2025, MNL PH
-    </h4> -->
+  
         <!-- Countdown -->
     <h2 class="text-base sm:text-lg font-semibold tracking-wide uppercase font-bit text-white " id="countdown">
       <!-- countdown goes here -->
@@ -68,11 +83,7 @@
     <!-- Dynamic Content Area -->
     
   </div>
-  <!-- Footer -->
-  <div class="absolute bottom-6 left-6 z-20 text-white text-sm">
-    <p class="uppercase font-bold tracking-widest">CELINA & ARVEE</p>
-    <p class="text-xs">SEPTEMBER 2025</p>
-  </div>
+  
 </section>
 <!-- end hero section -->
  <!-- time line schedule start -->
